@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_weight="10"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    tools:context=".MainActivity"
+    android:layout_gravity="center">
+
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/navigation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <TextViewd
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Happening near you"
+                android:textColor="#000"
+                android:textSize="@dimen/material_text_subhead"
+                android:textStyle="bold"
+                android:padding="8dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recylerview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Better Together"
+                android:textColor="#000"
+                android:textSize="@dimen/material_text_subhead"
+                android:textStyle="bold"
+                android:padding="8dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recylerview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go out"
+                android:textColor="#000"
+                android:textSize="@dimen/material_text_subhead"
+                android:textStyle="bold"
+                android:padding="8dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recylerview3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        android:elevation="2dp"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/navigation"
+        android:layout_alignParentBottom="true"
+        />
+
+
+</LinearLayout>
